@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* //------------------- styles for basic nav ------------------------// */
+
+body {
+  background: #161616;
+  color: white;
+  margin: 0 auto;
+  width: 75%;
+}
+
+span {
+  color: #67c0ff;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav>ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+
+li {
+  padding: 0 2em;
+}
+
+section {
+  background-color: #222222;
+  flex-shrink: 4;
+  margin: 1em;
+  padding: 1em;
+  border-bottom: 1px dashed white;
+
+}
+
+aside>ul {
+  list-style-type: none;
+}
+aside {
+  display: block;
+  position: fixed;
+  top: 4em;
+  right: 0px;
+}
+
+/* #section-and-aside {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+} */
+
+footer {
+  margin-top: 2em;
+}
+
+#footer-bar>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
