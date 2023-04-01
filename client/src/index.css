@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: #67c0ff;
+}
 
 /* //------------------- styles for basic nav ------------------------// */
 
@@ -55,18 +59,13 @@ section {
 aside>ul {
   list-style-type: none;
 }
+
 aside {
   display: block;
   position: fixed;
   top: 4em;
   right: 0px;
 }
-
-/* #section-and-aside {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-} */
 
 footer {
   margin-top: 2em;
@@ -77,3 +76,5 @@ footer {
   margin: 0;
   padding: 0;
 }
+
+/* //------------------- END styles for basic nav ------------------------// */
