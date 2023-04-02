@@ -1,3 +1,2 @@
-const Metrics = () => <div>Hello from Metrics Page!</div>
-
+import { Metrics } from "../components/Metrics";
 export default Metrics;

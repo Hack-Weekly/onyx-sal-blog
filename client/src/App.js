@@ -8,7 +8,7 @@ import Layout from "./Layout";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Post from "./pages/Post";
-import { Metrics } from "./components/Metrics";
+import Metrics from "./pages/Metrics";
 
 function App() {
   return (
