@@ -1,0 +1,12 @@
+#about-card-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+#about-card-container>section {
+    flex: 0 0 calc(40% - 20px);
+    margin: 10px;
+    text-align: center;
+}
