@@ -1,4 +1,10 @@
-const Blog = () => {
+const Blog = ({ visibleElements }) => {
+
+  const isVisible = (dataId) => {
+    if (visibleElements.length === 0) return true;
+    return visibleElements.includes(dataId);
+  };
+
   return(
     <>
       <div id="section-and-aside">
@@ -6,7 +12,8 @@ const Blog = () => {
           <span> is what changes the font color
       */}
       {/* blog-id-1 */}
-        <section>
+      {isVisible('1') && (
+        <section data-id="1">
           <h1 id="blog-id-1">This is the first post for the onyx crew</h1>
           <h3>March 31st 2023 | <span>onyx spring</span></h3>
           <p>Once upon a time, in a faraway land, there were seven travelers who set out on a quest to meet the powerful enchanter named Blog. These seven travelers were named Bruinbrewinbeer, DKKKKKKKK, iSonic, Jc, Julian_P, Nathanjs the King, and Stephenodea54.
@@ -30,10 +37,11 @@ const Blog = () => {
             And so, the tale of the seven travelers and their encounter with Blog and his minions was passed down through the ages as a testament to the power of determination, knowledge, and enchantment.</p>
           <span>Tags</span> | <span>Story</span>
         </section>
-
+      )}
 
         {/* blog-id-2 */}
-        <section>
+      {isVisible('2') && (
+        <section data-id="2">
           <h1 id="blog-id-2">Salamander Ashes</h1>
           <h3>March 6th 2023 | <span>onyx winter</span></h3>
           <p>Once upon a time, a group of adventurers set out to claim the throne of Most Valuable Pizza.
@@ -52,8 +60,10 @@ const Blog = () => {
           </p>
           <span>Tags</span> | <span>Simple Blog Search </span>
         </section>
+        )}
         {/* blog-id-3 */}
-        <section>
+        {isVisible('3') && (
+        <section data-id="3">
           <h1 id="blog-id-3">Storm's Fury</h1>
           <h3>March 22th 2023 | <span>Storm's Fury</span></h3>
           <p>Once upon a time, the group of adventurers found themselves on a quest to retrieve a magical artifact known as the Eye of the Storm. They had heard that the Eye had the power to control the very elements of nature, and they knew that if they could retrieve it, they could use its power to achieve their greatest desires.
@@ -74,8 +84,12 @@ const Blog = () => {
           <span>#artifacts</span>
           <span>#heroes</span>
         </section>
+        )}
+
+
         {/* blog-id-4 */}
-        <section>
+        {isVisible('4') && (
+        <section data-id="4">
           <h1 id="blog-id-4">The Storms Brew</h1>
           <h3>March 5th 2023 | <span>onyx winter</span></h3>
           <p>Deep in the mountains, Bruinbrewinbeer was brewing a batch of his famous beer. As he stirred the bubbling concoction, he felt a sense of restlessness. He knew that there were adventures waiting for him out there, and he couldn't resist the call of the unknown.
@@ -100,10 +114,10 @@ const Blog = () => {
           </p>
           <span>Tags</span> | <span>#brew</span>, <span>#dragons</span>, <span>#fiction</span>
         </section>
-
+        )}
       </div>
 
-      <aside>
+      {/* <aside>
         <ul>
           <li><a href="#blog-id-1">onyx spring - The tale of Blog</a></li>
           <li><a href="#blog-id-2">onyx spring - salamander ashes</a></li>
@@ -111,7 +125,7 @@ const Blog = () => {
           <li><a href="#blog-id-4">The Storm's Brew</a></li>
 
         </ul>
-      </aside>
+      </aside> */}
     </>
   );
 };
