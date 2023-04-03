@@ -1,19 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './index.css'
 
-const SearchBar = () => {
+// We want the search to only display the posts with the matching tags. 
+// We also want to be able to search by tags. 
+
+const SearchBar = ({ onSearch }) => {
     const [searchText, setSearchText] = useState('');
+    const searchTextRef = useRef('');
+
+    useEffect(() => {
+        searchTextRef.current = searchText;
+    }, [searchText]);
 
     const handleSearchTextChange = (event) => {
         setSearchText(event.target.value);
     };
 
 
+//     const handleSearchButtonclick = () => {
+//         const searchResults = items.filter((item) =>
+//             item.name.toLowerCase().includes(searchText.toLowerCase())
+//             );
+//         onSearch(searchResults);
+// };
+
     const handleSearchButtonclick = () => {
-        console.log('Perform search with text: ', searchText);
-
-};
-
+        const searchResults = [];
+        const elements = document.querySelectorAll('[data-id]');
+        elements.forEach((element) => {
+            if (
+                element.textContent && 
+                element.textContent.toLowerCase().includes(searchText.toLowerCase())
+            ) {
+                searchResults.push(element);
+            }
+        });
+        onSearch(searchResults);
+    };
 
     return (
         <div className="search-bar">

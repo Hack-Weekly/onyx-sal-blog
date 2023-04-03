@@ -6,7 +6,7 @@ const Blog = () => {
           <span> is what changes the font color
       */}
       {/* blog-id-1 */}
-        <section>
+        <section data-id="1">
           <h1 id="blog-id-1">This is the first post for the onyx crew</h1>
           <h3>March 31st 2023 | <span>onyx spring</span></h3>
           <p>Once upon a time, in a faraway land, there were seven travelers who set out on a quest to meet the powerful enchanter named Blog. These seven travelers were named Bruinbrewinbeer, DKKKKKKKK, iSonic, Jc, Julian_P, Nathanjs the King, and Stephenodea54.
@@ -33,7 +33,7 @@ const Blog = () => {
 
 
         {/* blog-id-2 */}
-        <section>
+        <section data-id="2">
           <h1 id="blog-id-2">Salamander Ashes</h1>
           <h3>March 6th 2023 | <span>onyx winter</span></h3>
           <p>Once upon a time, a group of adventurers set out to claim the throne of Most Valuable Pizza.
@@ -53,7 +53,7 @@ const Blog = () => {
           <span>Tags</span> | <span>Simple Blog Search </span>
         </section>
         {/* blog-id-3 */}
-        <section>
+        <section data-id="3">
           <h1 id="blog-id-3">Storm's Fury</h1>
           <h3>March 22th 2023 | <span>Storm's Fury</span></h3>
           <p>Once upon a time, the group of adventurers found themselves on a quest to retrieve a magical artifact known as the Eye of the Storm. They had heard that the Eye had the power to control the very elements of nature, and they knew that if they could retrieve it, they could use its power to achieve their greatest desires.
@@ -75,7 +75,7 @@ const Blog = () => {
           <span>#heroes</span>
         </section>
         {/* blog-id-4 */}
-        <section>
+        <section data-id="4">
           <h1 id="blog-id-4">The Storms Brew</h1>
           <h3>March 5th 2023 | <span>onyx winter</span></h3>
           <p>Deep in the mountains, Bruinbrewinbeer was brewing a batch of his famous beer. As he stirred the bubbling concoction, he felt a sense of restlessness. He knew that there were adventures waiting for him out there, and he couldn't resist the call of the unknown.
