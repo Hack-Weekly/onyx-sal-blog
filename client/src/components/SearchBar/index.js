@@ -26,7 +26,6 @@ const SearchBar = ({ onSearch }) => {
     // Since this button will presumably only be clicked once we have a string to search for, this handles our search by looking for everything that includes searchText. 
     const handleSearchButtonclick = () => {
         // Declaring an empty array of search results. 
-
         const searchResults = [];
         const elements = document.querySelectorAll('[data-id]');
         elements.forEach((element) => {
