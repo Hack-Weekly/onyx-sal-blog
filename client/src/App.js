@@ -12,10 +12,18 @@ import Metrics from "./pages/Metrics";
 import SearchBar from "./components/SearchBar";
 
 function App() {
+  const handleSearch = (results) => {
+    console.log('Search results: ', results)
+
+    results.forEach((element) => {
+        element.classList.add('highlight');
+    })
+}
+
   return (
     <Router>
       <Layout>
-        <SearchBar />
+        <SearchBar onSearch={handleSearch} />
         <Routes>
           <Route path="/" element={<Blog />} />
           <Route path="/about" element={<About />} />

@@ -16,13 +16,9 @@ const SearchBar = ({ onSearch }) => {
         setSearchText(event.target.value);
     };
 
-
-//     const handleSearchButtonclick = () => {
-//         const searchResults = items.filter((item) =>
-//             item.name.toLowerCase().includes(searchText.toLowerCase())
-//             );
-//         onSearch(searchResults);
-// };
+    SearchBar.defaultProps = {
+        onSearch: () => {},
+    };
 
     const handleSearchButtonclick = () => {
         const searchResults = [];
@@ -37,6 +33,8 @@ const SearchBar = ({ onSearch }) => {
         });
         onSearch(searchResults);
     };
+
+    
 
     return (
         <div className="search-bar">

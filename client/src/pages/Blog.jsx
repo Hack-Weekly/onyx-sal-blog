@@ -103,7 +103,7 @@ const Blog = () => {
 
       </div>
 
-      <aside>
+      {/* <aside>
         <ul>
           <li><a href="#blog-id-1">onyx spring - The tale of Blog</a></li>
           <li><a href="#blog-id-2">onyx spring - salamander ashes</a></li>
@@ -111,7 +111,7 @@ const Blog = () => {
           <li><a href="#blog-id-4">The Storm's Brew</a></li>
 
         </ul>
-      </aside>
+      </aside> */}
     </>
   );
 };
