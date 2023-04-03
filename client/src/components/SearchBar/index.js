@@ -20,6 +20,7 @@ const SearchBar = ({ onSearch }) => {
         onSearch: () => {},
     };
 
+
     const handleSearchButtonclick = () => {
         const searchResults = [];
         const elements = document.querySelectorAll('[data-id]');
@@ -34,7 +35,11 @@ const SearchBar = ({ onSearch }) => {
         onSearch(searchResults);
     };
 
-    
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearchButtonclick();
+        }
+      };
 
     return (
         <div className="search-bar">
@@ -43,6 +48,7 @@ const SearchBar = ({ onSearch }) => {
             placeholder="Search.." 
             value={searchText} 
             onChange={handleSearchTextChange} 
+            onKeyDown={handleKeyPress}
             />
             <button onClick={handleSearchButtonclick}>Search</button>
         </div>
