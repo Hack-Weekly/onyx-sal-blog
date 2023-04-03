@@ -1,3 +1,7 @@
+// We're going to be only the sections/divs that return a True match for any search query. By default, as there is no search, we're going to be displaying the whole blog page. 
+// As a user enters a string in the search from, we're going to be hiding any sections/divs that do not contain the searched string.
+// Therefore, going forward, any new blog post/section will have to have the section/div nested in the isVisible function as well as contain data-id as an attribute in the section/div itself. 
+
 const Blog = ({ visibleElements }) => {
 
   const isVisible = (dataId) => {
