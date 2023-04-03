@@ -9,11 +9,13 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Post from "./pages/Post";
 import Metrics from "./pages/Metrics";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
     <Router>
       <Layout>
+        <SearchBar />
         <Routes>
           <Route path="/" element={<Blog />} />
           <Route path="/about" element={<About />} />
