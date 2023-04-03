@@ -1,0 +1,14 @@
+footer {
+    margin-top: 2em;
+    border-top: 1px dashed white;
+}
+
+footer>ul {
+    list-style-type: none;
+    margin-top: 1em;
+    padding: 0;
+}
+
+footer>p {
+    opacity: 0.3;
+}

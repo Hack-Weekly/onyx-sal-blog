@@ -11,6 +11,17 @@ const BlogComponent = ({ id, title, createdAt, author, content }) => {
 };
 
 const Blog = () => {
+// We're going to be only the sections/divs that return a True match for any search query. By default, as there is no search, we're going to be displaying the whole blog page. 
+// As a user enters a string in the search from, we're going to be hiding any sections/divs that do not contain the searched string.
+// Therefore, going forward, any new blog post/section will have to have the section/div nested in the isVisible function as well as contain data-id as an attribute in the section/div itself. 
+
+const Blog = ({ visibleElements }) => {
+
+  const isVisible = (dataId) => {
+    if (visibleElements.length === 0) return true;
+    return visibleElements.includes(dataId);
+  };
+
   return(
     <>
       <div id="section-and-aside">
@@ -29,9 +40,11 @@ const Blog = () => {
           />
         ))}
 
+
+        )}
       </div>
 
-      <aside>
+      {/* <aside>
         <ul>
           <li><a href="#blog-id-1">onyx spring - The tale of Blog</a></li>
           <li><a href="#blog-id-2">onyx spring - salamander ashes</a></li>
@@ -39,7 +52,7 @@ const Blog = () => {
           <li><a href="#blog-id-4">The Storm's Brew</a></li>
 
         </ul>
-      </aside>
+      </aside> */}
     </>
   );
 };

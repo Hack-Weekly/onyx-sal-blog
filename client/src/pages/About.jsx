@@ -1,3 +1,3 @@
-const About = () => <div>Hello from About Page!</div>
+import { About } from "../components/About";
 
 export default About;
