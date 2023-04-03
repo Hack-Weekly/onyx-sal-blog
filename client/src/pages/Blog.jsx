@@ -1,4 +1,10 @@
-const Blog = () => {
+const Blog = ({ visibleElements }) => {
+
+  const isVisible = (dataId) => {
+    if (visibleElements.length === 0) return true;
+    return visibleElements.includes(dataId);
+  };
+
   return(
     <>
       <div id="section-and-aside">
@@ -6,6 +12,7 @@ const Blog = () => {
           <span> is what changes the font color
       */}
       {/* blog-id-1 */}
+      {isVisible('1') && (
         <section data-id="1">
           <h1 id="blog-id-1">This is the first post for the onyx crew</h1>
           <h3>March 31st 2023 | <span>onyx spring</span></h3>
@@ -30,9 +37,10 @@ const Blog = () => {
             And so, the tale of the seven travelers and their encounter with Blog and his minions was passed down through the ages as a testament to the power of determination, knowledge, and enchantment.</p>
           <span>Tags</span> | <span>Story</span>
         </section>
-
+      )}
 
         {/* blog-id-2 */}
+      {isVisible('2') && (
         <section data-id="2">
           <h1 id="blog-id-2">Salamander Ashes</h1>
           <h3>March 6th 2023 | <span>onyx winter</span></h3>
@@ -52,7 +60,9 @@ const Blog = () => {
           </p>
           <span>Tags</span> | <span>Simple Blog Search </span>
         </section>
+        )}
         {/* blog-id-3 */}
+        {isVisible('3') && (
         <section data-id="3">
           <h1 id="blog-id-3">Storm's Fury</h1>
           <h3>March 22th 2023 | <span>Storm's Fury</span></h3>
@@ -74,7 +84,11 @@ const Blog = () => {
           <span>#artifacts</span>
           <span>#heroes</span>
         </section>
+        )}
+
+
         {/* blog-id-4 */}
+        {isVisible('4') && (
         <section data-id="4">
           <h1 id="blog-id-4">The Storms Brew</h1>
           <h3>March 5th 2023 | <span>onyx winter</span></h3>
@@ -100,7 +114,7 @@ const Blog = () => {
           </p>
           <span>Tags</span> | <span>#brew</span>, <span>#dragons</span>, <span>#fiction</span>
         </section>
-
+        )}
       </div>
 
       {/* <aside>
