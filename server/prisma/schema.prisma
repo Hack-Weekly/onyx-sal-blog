@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma" // Need this for foreign key contrai
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String   
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+  content   String   @db.Text
+  tags      Tag[]    @relation("TagsAndPosts")
+
+  @@index(authorId)
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  posts Post[] @relation("TagsAndPosts")
+}
+
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  posts Post[]
+}
