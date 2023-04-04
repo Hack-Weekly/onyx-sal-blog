@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Footer } from "./components/Footer";
+import "./Layout.css";
 
 const Layout = ({ children }) => {
   const pathname = useLocation().pathname;
@@ -27,10 +28,20 @@ const Layout = ({ children }) => {
     },
   ];
 
+
+  // Scroll to top functionality
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return(
     <>
+
+      
       <nav id="nav-bar">
+      <Link to = "/">
         <h1><span>&gt; Onyx Sal Blog</span></h1>
+        </Link>
         <ul>
           { navbarLinks.map(link => (
             <li
@@ -49,7 +60,12 @@ const Layout = ({ children }) => {
       {children}
       {/* This is the footer component located on /component/Footer/index.js */}
       <Footer />
+
+      <button className="sticky-button" onClick={scrollToTop}>
+        <span>Back to top</span>
+      </button>
     </>
+    
   );
 };
 
