@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { Footer } from "./components/Footer";
 import "./Layout.css";
 
 const Layout = ({ children }) => {
@@ -57,8 +58,8 @@ const Layout = ({ children }) => {
       </nav>
 
       {children}
-
-   
+      {/* This is the footer component located on /component/Footer/index.js */}
+      <Footer />
 
       <footer id="#footer-bar">
         <ul>
