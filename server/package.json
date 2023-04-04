@@ -12,6 +12,7 @@
   "author": "Stephen O'Dea",
   "license": "ISC",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.11",
     "prettier": "^2.8.7",
