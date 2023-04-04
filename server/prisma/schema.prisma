@@ -8,20 +8,31 @@ generator client {
 datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
-  relationMode = "prisma" // Need this for foreign key contrai
+  relationMode = "prisma" // Need this for foreign key contraints
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  title     String   
-  author    User     @relation(fields: [authorId], references: [id])
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  title     String
+  author    User      @relation(fields: [authorId], references: [id])
   authorId  Int
-  content   String   @db.Text
-  tags      Tag[]    @relation("TagsAndPosts")
+  content   String    @db.Text
+  tags      Tag[]     @relation("TagsAndPosts")
+  comments  Comment[]
 
   @@index(authorId)
+}
+
+model Comment {
+  id      Int    @id @default(autoincrement())
+  author  String
+  content String @db.Text
+  post    Post   @relation(fields: [postId], references: [id])
+  postId  Int
+
+  @@index(postId)
 }
 
 model Tag {
