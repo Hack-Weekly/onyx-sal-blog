@@ -1,10 +1,12 @@
-import { dummyBlogStuff } from "../dummyData";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const BlogComponent = ({ id, title, createdAt, author, content }) => {
+
   return(
     <section style={{ whiteSpace: 'pre-line' }}>
       <h1 id={`blog-id-${id}`}>{title}</h1>
-      <h3>{createdAt} | <span>{author}</span></h3>
+      <h3>{new Date(createdAt).toLocaleDateString()} | <span>{author}</span></h3>
       <p>{content}</p>
     </section>
   );
@@ -16,6 +18,15 @@ const BlogComponent = ({ id, title, createdAt, author, content }) => {
 
 const Blog = () => {
 
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/posts")
+      .then(response => setBlogPosts(response.data))
+      .catch(error => console.log(error));
+  }, []);
+
   return(
     <>
       <div id="section-and-aside">
@@ -23,16 +34,19 @@ const Blog = () => {
           <span> is what changes the font color
       */}
 
-        { dummyBlogStuff.map(blog => (
+        { blogPosts && blogPosts.map(blogPost => (
           <BlogComponent
-            key={blog.id}
-            id={blog.id}
-            title={blog.title}
-            createdAt={blog.createdAt}
-            author={blog.author}
-            content={blog.content}
+            key={blogPost.id}
+            id={blogPost.id}
+            title={blogPost.title}
+            createdAt={blogPost.createdAt}
+            author={blogPost.author.name}
+            content={blogPost.content}
           />
         ))}
+
+        {/* If we have no blog posts, display a message */}
+        { blogPosts.length === 0 ? <section>Apparently we have nothing interesting to write about!</section> : null}
 
       </div>
 
