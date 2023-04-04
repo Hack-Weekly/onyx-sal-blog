@@ -61,17 +61,6 @@ const Layout = ({ children }) => {
       {/* This is the footer component located on /component/Footer/index.js */}
       <Footer />
 
-      <footer id="#footer-bar">
-        <ul>
-          <li>Github Repository</li>
-          <li>Team Page</li>
-          <li>Blogs</li>
-          <li>Something else</li>
-        </ul>
-        <p>All Rights Reserved</p>
-      </footer>
-
-      
       <button className="sticky-button" onClick={scrollToTop}>
         <span>Back to top</span>
       </button>
