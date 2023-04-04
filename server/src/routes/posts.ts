@@ -2,14 +2,21 @@ import { Prisma } from "@prisma/client";
 import express from "express";
 import prisma from "../prisma.js";
 
-// TODO: Put array methods into their own module
-
 const router = express.Router();
 
 // Get all blog posts
 router.get("/posts", async (_req, res) => {
   const posts = await prisma.post.findMany({
-    include: { tags: true },
+    select: {
+      id: true,
+      createdAt: true,
+      updatedAt: true,
+      title: true,
+      content: true,
+      tags: true,
+      author: true,
+      comments: true,
+    },
   });
 
   res.json(posts);
@@ -22,7 +29,16 @@ router.get("/posts/:id", async (req, res) => {
 
   const post = await prisma.post.findUnique({
     where: { id: idInt },
-    include: { tags: true },
+    select: {
+      id: true,
+      createdAt: true,
+      updatedAt: true,
+      title: true,
+      content: true,
+      tags: true,
+      author: true,
+      comments: true,
+    },
   });
 
   res.json(post);
@@ -31,10 +47,6 @@ router.get("/posts/:id", async (req, res) => {
 // Create a blog post
 router.post("/posts", async (req, res) => {
   const { title, content, authorName, tags } = req.body;
-
-  // const tagsData = tags.map((tag: Prisma.TagCreateInput) => {
-  //   return { name: tag.name }
-  // });
 
   const post = await prisma.post.create({
     data: {
