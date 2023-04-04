@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import express from "express";
 import prisma from "../prisma.js";
 
