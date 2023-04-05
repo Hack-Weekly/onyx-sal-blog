@@ -12,14 +12,12 @@ export const Metrics = () => {
             .catch(error => console.error(error));
     }, []);
 
-
-
     return (
         <>
             <h1>Metrics</h1>
-            {tags.map(tag => {
+            {tags && tags.map(tag => {
                 return (
-                    <h1>{tag.id}</h1>
+                    <h1>{tag.name}</h1>
                 )
             })}
             <p>This is where we will track the metrics of various projects by the onyx-salamander crew</p>
