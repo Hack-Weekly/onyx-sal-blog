@@ -26,13 +26,15 @@ model Post {
 }
 
 model Comment {
-  id      Int    @id @default(autoincrement())
-  author  String
-  content String @db.Text
-  post    Post   @relation(fields: [postId], references: [id])
-  postId  Int
+  id       Int    @id @default(autoincrement())
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId Int
+  content  String @db.Text
+  post     Post   @relation(fields: [postId], references: [id])
+  postId   Int
 
   @@index(postId)
+  @@index(authorId)
 }
 
 model Tag {
@@ -42,7 +44,10 @@ model Tag {
 }
 
 model User {
-  id    Int    @id @default(autoincrement())
-  name  String @unique
-  posts Post[]
+  id       Int       @id @default(autoincrement())
+  githubId Int
+  name     String    @unique
+  email    String?
+  posts    Post[]
+  comments Comment[]
 }
