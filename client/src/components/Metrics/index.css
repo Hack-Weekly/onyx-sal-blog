@@ -1,9 +1,3 @@
-#tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .tag-card {
     background-color: #67c0ff69;
     padding: 1em;
@@ -11,7 +5,6 @@
     border-radius: 12px;
 }
 
-#tag-bar-graph {
-    width: 100%;
-    height: 100%;
+#post-bar-graph, #tag-bar-graph {
+    border-bottom: 1px dashed white;
 }
