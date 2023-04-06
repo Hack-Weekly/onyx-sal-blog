@@ -10,3 +10,8 @@
     margin: 2em;
     border-radius: 12px;
 }
+
+#tag-bar-graph {
+    width: 100%;
+    height: 200px;
+}
