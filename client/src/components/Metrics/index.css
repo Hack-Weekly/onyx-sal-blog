@@ -1,0 +1,12 @@
+#tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tag-card {
+    background-color: #67c0ff69;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 12px;
+}
