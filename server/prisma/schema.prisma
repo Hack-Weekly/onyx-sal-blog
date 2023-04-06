@@ -45,9 +45,10 @@ model Tag {
 
 model User {
   id       Int       @id @default(autoincrement())
-  githubId Int
-  name     String    @unique
+  githubId Int       @unique
+  name     String
   email    String?
+  avatar   String?
   posts    Post[]
   comments Comment[]
 }
