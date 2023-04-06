@@ -46,7 +46,7 @@ router.get("/posts/:id", async (req, res) => {
 
 // Create a blog post
 router.post("/posts", async (req, res) => {
-  const { title, content, authorName, tags } = req.body;
+  const { title, content, authorName, authorGithubId, authorEmail, tags } = req.body;
 
   const post = await prisma.post.create({
     data: {
@@ -54,7 +54,11 @@ router.post("/posts", async (req, res) => {
       content,
       author: {
         connectOrCreate: {
-          create: { name: authorName },
+          create: {
+            name: authorName,
+            githubId: authorGithubId,
+            email: authorEmail,
+          },
           where: { name: authorName },
         },
       },
