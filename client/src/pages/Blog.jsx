@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import SearchBar from '../components/SearchBar';
 
 const Blog = () => {
@@ -14,9 +15,12 @@ const Blog = () => {
     // }, [searchText, posts]);
 
     const fetchBlogData = async () => {
-        const response = await fetch('http://localhost:8000/api/posts');
-        const data = await response.json();
-        setBlogPosts(data);
+      try {
+        const response = await axios.get('http://localhost:8000/api/posts');
+        setBlogPosts(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     const handleSearch = (searchText) => {
