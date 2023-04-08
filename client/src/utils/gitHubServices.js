@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const getAccessTokenGithub = async (code) => {
   const { data } = await axios.get(`http://localhost:8000/api/accessToken?code=${code}`, {
