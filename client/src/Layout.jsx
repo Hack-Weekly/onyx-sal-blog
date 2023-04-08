@@ -1,6 +1,7 @@
 // Module Imports
 import { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import cryptoRandomString from 'crypto-random-string';
 
 // Global State
 import { useUserStore } from "./stores/userStore";
@@ -15,8 +16,14 @@ import { Footer } from "./components/Footer";
 import { getAccessTokenGithub, getUserDataGithub } from "./utils/gitHubServices";
 
 const login = () => {
+  // Was going to use crypto but turns out it was deprecated
+  const state = cryptoRandomString({
+    length: 16,
+    type: "hex",
+  });
+
   localStorage.setItem("loginWith", "GitHub");
-  window.location.assign(`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}`);
+  window.location.assign(`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&scope=user&state=${state}&allow_signup=false&login=login`);
 };
 
 const scrollToTop = () => {
