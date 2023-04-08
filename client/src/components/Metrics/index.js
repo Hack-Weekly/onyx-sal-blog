@@ -17,7 +17,7 @@ export const Metrics = () => {
             <h1>Metrics</h1>
             {tags && tags.map(tag => {
                 return (
-                    <h1 key={tag.id}>{tag.name}</h1>
+                    <h1>{tag.name}</h1>
                 )
             })}
             <p>This is where we will track the metrics of various projects by the onyx-salamander crew</p>
