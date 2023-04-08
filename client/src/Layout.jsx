@@ -98,7 +98,7 @@ const Layout = ({ children }) => {
 
       <nav id="nav-bar">
         <Link to = "/">
-          <h1><span>&gt; Onyx Sal Blog</span></h1>
+          <h1><span>&gt; Onyx Salamander</span></h1>
         </Link>
         <ul>
           { navbarLinks.map(link => (
