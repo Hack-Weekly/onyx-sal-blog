@@ -41,15 +41,18 @@ export const getUserData = async (accessToken: string, _req: Request, res: Respo
 
     const user = await prisma.user.upsert({
       where: {
-        name: data.login,
+        githubId: data.id,
       },
       update: {
         name: data.login,
+        email: data.email,
+        avatar: data.avatar_url,
       },
       create: {
         githubId: data.id,
         name: data.login,
         email: data.email,
+        avatar: data.avatar_url,
       },
     });
 

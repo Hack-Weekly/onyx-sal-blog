@@ -8,6 +8,7 @@ dotenv.config();
 import blogRouter from "./routes/posts.js";
 import tagRouter from "./routes/tags.js";
 import githubRouter from "./routes/github.js";
+import userRouter from "./routes/users.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get("/", (_req, res) => {
 
 app.use("/api", blogRouter);
 app.use("/api", tagRouter);
+app.use("/api", userRouter);
 app.use("/api", githubRouter);
 
 app.listen(8000, () => console.log("🚀 Server now live at http://localhost:8000"));
