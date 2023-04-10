@@ -3,7 +3,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: #1a1919;
+    background-color: #161616;
   }
   
   body {
@@ -29,7 +29,6 @@
   }
 
   
-  
   #nav-bar li:hover {
     transform: scale(1.1);
   }
@@ -37,6 +36,14 @@
   #nav-bar li a:hover {
     color: #4c4c4c;
     transform: translateY(-3px);
+  }
+
+  .loginBtn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #4c4c4c;
+    /* Man I hate CSS */
+    transform: translateY(1.5px);
   }
 
 
@@ -58,3 +65,10 @@
   .sticky-button:hover {
     opacity: 1;
   }
+
+/* Styles for User Avatar */
+.userLogo {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+}
