@@ -39,7 +39,7 @@ This is a blog for the Hack Weekly team, Onyx Salamanders, to track their progre
 ./onyx-sal-blog
 ## Quick start steps for initial app startup
 
-1. ``` npm run initial-package-install ```
+1. ``` npm run quick ```
 2. ``` npm run start ```
 
 [Back to Top](#table-of-contents)
