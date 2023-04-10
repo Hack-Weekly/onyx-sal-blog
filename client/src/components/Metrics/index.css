@@ -1,0 +1,10 @@
+.tag-card {
+    background-color: #67c0ff69;
+    padding: 1em;
+    margin: 2em;
+    border-radius: 12px;
+}
+
+#post-bar-graph, #tag-bar-graph {
+    border-bottom: 1px dashed white;
+}
