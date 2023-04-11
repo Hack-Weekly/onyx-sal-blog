@@ -37,7 +37,13 @@ router.get("/posts/:id", async (req, res) => {
       content: true,
       tags: true,
       author: true,
-      comments: true,
+      comments: {
+        select: {
+          id: true,
+          author: true,
+          content: true,
+        },
+      },
     },
   });
 
