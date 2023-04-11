@@ -14,6 +14,7 @@ router.get("/users/:id", async (req, res) => {
       id: true,
       githubId: true,
       name: true,
+      url: true,
       email: true,
       comments: true,
     },

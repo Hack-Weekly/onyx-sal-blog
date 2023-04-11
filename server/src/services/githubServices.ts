@@ -45,12 +45,14 @@ export const getUserData = async (accessToken: string, _req: Request, res: Respo
       },
       update: {
         name: data.login,
+        url: data.html_url,
         email: data.email,
         avatar: data.avatar_url,
       },
       create: {
         githubId: data.id,
         name: data.login,
+        url: data.html_url,
         email: data.email,
         avatar: data.avatar_url,
       },
