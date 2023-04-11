@@ -47,8 +47,10 @@ model User {
   id       Int       @id @default(autoincrement())
   githubId Int       @unique
   name     String
+  url      String    @default("")
   email    String?
   avatar   String?
+  isAdmin  Boolean   @default(false)
   posts    Post[]
   comments Comment[]
 }
