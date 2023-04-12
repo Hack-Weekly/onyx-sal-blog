@@ -44,11 +44,6 @@ const navbarLinks = [
   },
   {
     id: 3,
-    path: "/post",
-    label: "Post",
-  },
-  {
-    id: 4,
     path: "/metrics",
     label: "Metrics",
   },
@@ -92,6 +87,7 @@ const Login = () => {
 
 const Layout = ({ children }) => {
   const pathname = useLocation().pathname;
+  const isAdmin = useUserStore(state => state.user.isAdmin);
 
   return(
     <>
@@ -112,6 +108,12 @@ const Layout = ({ children }) => {
               <Link to={link.path}>{link.label}</Link>
             </li>
           ))}
+
+          { isAdmin ?
+            <li style={{ fontWeight: pathname.startsWith("/post") ? 700 : 400 }}>
+              <Link to="/post">Post</Link>
+            </li> :
+            null }
 
           <Login />
 
