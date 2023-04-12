@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Post from "./pages/Post";
 import Metrics from "./pages/Metrics";
+import SingleBlogPost from "./components/singleBlogPost/index";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/post" element={<Post />} />
           <Route path="/metrics" element={<Metrics />} />
+          <Route path="/posts/:id" element={<SingleBlogPost /> } />
         </Routes>
       </Layout>
     </Router>
