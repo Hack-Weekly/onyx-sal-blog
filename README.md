@@ -37,10 +37,15 @@ This is a blog for the Hack Weekly team, Onyx Salamanders, to track their progre
 
 ### Make sure you are in the root directory:
 ./onyx-sal-blog
-## Quick start steps for initial app startup
+## Steps to start the app locally
 
 1. ``` npm run quick ```
+    - Is a quick script that will install all needed dependencies that will allow for the application to run correctly. 
 2. ``` npm run start ```
+    - This will spin up the react app (frontend)
+3. ``` cd ./server && npm run start ```
+    - Will spin up a local instance of the server. However, you will need to create your own .env file and ensure you have the correct information in the .env file so that way you can make a connection to the database. 
+
 
 [Back to Top](#table-of-contents)
 
@@ -52,20 +57,44 @@ To showcase onyx-salamanders skills and projects as a full stack. dev team
 
 # Languages Used
 
-React, typescript, javascript, css, ??
+    React
+    typescript
+    javascript
+    jsx
+    css
+## Frontend Framework
+    React
+## Backend Database
+    Prisma database with the structure of mysql.
 
 [Back to Top](#table-of-contents)
 
-# Dependencies Used
+# Frontend Dependencies
 
+    "axios"
+    "crypto-random-string"
     "react"
     "react-dom"
     "react-router-dom"
     "react-scripts"
+    "recharts"
+    "zustand"
+# Backend Dependencies
+    "@prisma/client"
+    "@types/dotenv"
+    "@types/express"
+    "@types/node"
+    "axios"
+    "cors"
+    "express"
+    "prettier"
+    "prisma"
+    "ts-node"
+    "typescript"
 
 [Back to Top](#table-of-contents)
 
-# Contribution Guidelines
+# Overall Application Purpose
 
 There are main branch protections in place. Each member is required to create pull requests with a branch that is not the main and then two reviews are required before it can be merged to main.
 
