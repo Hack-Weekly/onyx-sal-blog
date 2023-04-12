@@ -1,0 +1,67 @@
+/* Flex Stuff */
+.commentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+}
+
+.userInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.commentFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.commentContent {
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  padding-left: 4.5em;
+}
+
+/* Edit Button */
+.editCommentBtn {
+  padding: 0.5rem 1rem;
+  background-color: #e8e9ed;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.editCommentBtn:hover {
+  background-color: #a9a9a9;
+}
+
+.editCommentBtn:active {
+  background-color: #4c4c4c;
+}
+
+/* Delete Button */
+.deleteCommentBtn {
+  padding: 0.5rem 1rem;
+  background-color: #67c0ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deleteCommentBtn:hover {
+  background-color: #448ee4;
+}
+
+.deleteCommentBtn:active {
+  background-color: #4c4c4c;
+}
