@@ -81,7 +81,7 @@ We're thrilled to be working on exciting projects and sharing our progress with 
 
 # Known Issues/Errors
 
-Not applicable.
+In progress
 
 [Back to Top](#table-of-contents)
 
@@ -90,8 +90,18 @@ Not applicable.
 ### [GitHub Repository](https://github.com/Hack-Weekly/onyx-sal-blog)
 
 # Contributors
-
-
+## [StephenODea54](https://github.com/StephenODea54) -> ```Behold, the mastermind behind the backend, able to conjure up entire systems in mere minutes. With a mere flick of their wrist, they can make you feel like they were present at the dawn of time, crafting the very fabric of the universe. This technomancer is the wizard you want on your side, weaving their magic to create backend systems that will leave your competitors quaking in their boots.```
+#
+## [jpatterson933](https://github.com/jpatterson933) -> ```Meet the enigmatic storyteller, a data wizard who can harness colossal amounts of information with ease. They're a visionary who dares to quantify the unquantifiable, creating metrics for things that should never be measured. With a single stroke of their keyboard, they can weave tales that bring even the driest of data to life, illuminating insights that leave others in the dark. This master storyteller is not afraid to push boundaries, using their unique abilities to craft narratives that will captivate audiences and inspire action.```
+[Back to Top](#table-of-contents)
+#
+## [julianp15](https://github.com/julianp15) -> ```Behold, a stalwart member of our team, tirelessly balancing the rigors of academia with the demands of work. While we toil away at the office, they're out there pursuing knowledge and honing their skills, leaving us all in awe of their incredible drive and determination. This scholar is a true force to be reckoned with, pursuing their passions with an unrelenting fervor that sets them apart from the pack. Even as they grapple with the challenges of higher education, they remain a rock-solid member of our team, lending their expertise and support whenever we need it most.```
+#
+## [nathanjslim](https://github.com/nathanjslim) -> ```Behold our fearless leader, the mighty king whose spirit drives us to ever greater heights. They are the one true master of Onyx Salamander, an unyielding force that ensures only those who push themselves to the limit can hope to keep pace. With a heart of fire and a will of steel, they inspire us to be our best selves, challenging us to go beyond what we thought possible. Their leadership is a beacon of hope in troubled times, a shining example of what true strength and determination can achieve. We are honored to follow in their footsteps, guided by their unerring sense of purpose and their unbreakable spirit.```
+[Back to Top](#table-of-contents)
+#
+## [eyobodega](https://github.com/eyobodega) -> ```Introducing the master of styles, a true virtuoso whose ability to push the boundaries of elegance and refinement is matched only by their unwavering dedication to our team's success. They are the driving force behind our momentum, propelling us ever forward with a single, masterful stroke that sets us apart from the rest. Their creative genius is legendary, inspiring us to embrace a new level of sophistication and finesse in everything we do. And even in the quiet moments, when others might falter, this masterful artist remains steadfast, their unbreakable spirit lifting us up and carrying us forward. We are honored to work alongside them, privileged to be a part of their grand vision for what we can achieve together.```
+-------------------------------
 # License Information
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
